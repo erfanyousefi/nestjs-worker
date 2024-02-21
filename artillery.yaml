@@ -1,0 +1,11 @@
+config:
+  target: http://localhost:5500
+  phases:
+    - duration: 60
+      arrivalRate: 1
+  plugins:
+    metrics-by-endpoint: {}
+scenarios:
+  - flow:
+    - get:
+        url: '/blocking?cpuTimeMs=100'
